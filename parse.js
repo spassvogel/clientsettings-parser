@@ -8,9 +8,12 @@ import util from 'util'
 
 const args = process.argv.slice(2)
 if (args.length === 0) {
-  throw new Error("Please provide the path to the B2B-Backend.sln file!")
+  throw new Error("Please provide the path to the B2B.sln file!")
 }
-const [projectBasePath] = args
+let [projectBasePath] = args
+if (projectBasePath.endsWith('B2B.sln')){
+  projectBasePath = projectBasePath.substring(0, projectBasePath.length - 'B2B.sln'.length)
+}
 
 if (!doxygen.isDoxygenExecutableInstalled()) {
   console.log("Doxygen is not installed yet. hang on...")
