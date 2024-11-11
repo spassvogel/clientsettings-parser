@@ -1,0 +1,17 @@
+{
+  "name": "b2b-parse-clientsettings-docs",
+  "version": "1.0.0",
+  "description": "Parses clientsettings documentation as markdown",
+  "main": "parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Wouter van den Heuvel",
+  "license": "ISC",
+  "dependencies": {
+    "doxygen": "^0.4.0",
+    "xml-query": "^1.5.0",
+    "xml-reader": "^2.4.3"
+  }
+}
